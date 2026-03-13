@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class LengthDescriptor : IExpressionDescriptor
+    public class LengthDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public LengthDescriptor()
-		{
-		}
-
-		public LengthDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class FractionalSecondsDescriptor : IExpressionDescriptor
+    public class FractionalSecondsDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public FractionalSecondsDescriptor()
-		{
-		}
-
-		public FractionalSecondsDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class NotEqualsBinaryDescriptor : BinaryDescriptor
+    public class NotEqualsBinaryDescriptor(DescriptorBase left, DescriptorBase right) : BinaryDescriptor(left, right)
     {
-		public NotEqualsBinaryDescriptor()
-		{
-		}
-
-		public NotEqualsBinaryDescriptor(IExpressionDescriptor left, IExpressionDescriptor right) : base(left, right)
-		{
-		}
     }
 }

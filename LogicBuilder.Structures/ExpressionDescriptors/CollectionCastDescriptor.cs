@@ -2,19 +2,9 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CollectionCastDescriptor : IExpressionDescriptor
+    public class CollectionCastDescriptor(DescriptorBase operand, string type) : DescriptorBase
     {
-		public CollectionCastDescriptor()
-		{
-		}
-
-		public CollectionCastDescriptor(IExpressionDescriptor operand, Type type)
-		{
-			Operand = operand;
-			Type = type;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
-		public Type Type { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
+        public string Type { get; set; } = type;
     }
 }

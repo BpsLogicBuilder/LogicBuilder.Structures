@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SelectManyDescriptor : SelectorMethodDescriptorBase
+    public class SelectManyDescriptor(DescriptorBase sourceOperand, DescriptorBase selectorBody, string selectorParameterName) : SelectorMethodDescriptorBase(sourceOperand, selectorBody, selectorParameterName)
     {
-		public SelectManyDescriptor()
-		{
-		}
-
-		public SelectManyDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor selectorBody, string selectorParameterName) : base(sourceOperand, selectorBody, selectorParameterName)
-		{
-		}
     }
 }

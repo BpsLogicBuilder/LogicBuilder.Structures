@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class LessThanOrEqualsBinaryDescriptor : BinaryDescriptor
+    public class LessThanOrEqualsBinaryDescriptor(DescriptorBase left, DescriptorBase right) : BinaryDescriptor(left, right)
     {
-		public LessThanOrEqualsBinaryDescriptor()
-		{
-		}
-
-		public LessThanOrEqualsBinaryDescriptor(IExpressionDescriptor left, IExpressionDescriptor right) : base(left, right)
-		{
-		}
     }
 }

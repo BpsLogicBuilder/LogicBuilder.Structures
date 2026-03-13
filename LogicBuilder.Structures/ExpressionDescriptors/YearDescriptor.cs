@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class YearDescriptor : IExpressionDescriptor
+    public class YearDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public YearDescriptor()
-		{
-		}
-
-		public YearDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class HasDescriptor : IExpressionDescriptor
+    public class HasDescriptor(DescriptorBase left, DescriptorBase right) : DescriptorBase
     {
-		public HasDescriptor()
-		{
-		}
-
-		public HasDescriptor(IExpressionDescriptor left, IExpressionDescriptor right)
-		{
-			Left = left;
-			Right = right;
-		}
-
-		public IExpressionDescriptor Left { get; set; }
-		public IExpressionDescriptor Right { get; set; }
+        public DescriptorBase Left { get; set; } = left;
+        public DescriptorBase Right { get; set; } = right;
     }
 }

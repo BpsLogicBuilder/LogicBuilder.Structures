@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ConvertToNullableUnderlyingValueDescriptor : IExpressionDescriptor
+    public class ConvertToNullableUnderlyingValueDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-		public ConvertToNullableUnderlyingValueDescriptor()
-		{
-		}
-
-		public ConvertToNullableUnderlyingValueDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

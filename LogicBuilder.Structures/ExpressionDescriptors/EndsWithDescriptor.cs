@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class EndsWithDescriptor : IExpressionDescriptor
+    public class EndsWithDescriptor(DescriptorBase left, DescriptorBase right) : DescriptorBase
     {
-		public EndsWithDescriptor()
-		{
-		}
-
-		public EndsWithDescriptor(IExpressionDescriptor left, IExpressionDescriptor right)
-		{
-			Left = left;
-			Right = right;
-		}
-
-		public IExpressionDescriptor Left { get; set; }
-		public IExpressionDescriptor Right { get; set; }
+        public DescriptorBase Left { get; set; } = left;
+        public DescriptorBase Right { get; set; } = right;
     }
 }

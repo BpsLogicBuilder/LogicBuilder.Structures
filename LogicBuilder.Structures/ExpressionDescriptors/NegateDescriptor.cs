@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class NegateDescriptor : IExpressionDescriptor
+    public class NegateDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public NegateDescriptor()
-		{
-		}
-
-		public NegateDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class TotalSecondsDescriptor : IExpressionDescriptor
+    public class TotalSecondsDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public TotalSecondsDescriptor()
-		{
-		}
-
-		public TotalSecondsDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

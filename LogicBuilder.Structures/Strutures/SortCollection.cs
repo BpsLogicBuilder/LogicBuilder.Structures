@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace LogicBuilder.Expressions.Utils.Strutures
 {
     public class SortCollection
     {
-        public SortCollection() { }
         public SortCollection(ICollection<SortDescription> sortDescriptions)
         {
             this.SortDescriptions = sortDescriptions;

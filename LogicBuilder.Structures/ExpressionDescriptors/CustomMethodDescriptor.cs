@@ -2,19 +2,9 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CustomMethodDescriptor : IExpressionDescriptor
+    public class CustomMethodDescriptor(MethodInfo methodInfo, DescriptorBase[] args) : DescriptorBase
     {
-		public CustomMethodDescriptor()
-		{
-		}
-
-		public CustomMethodDescriptor(MethodInfo methodInfo, IExpressionDescriptor[] args)
-		{
-			MethodInfo = methodInfo;
-			Args = args;
-		}
-
-		public MethodInfo MethodInfo { get; set; }
-		public IExpressionDescriptor[] Args { get; set; }
+        public MethodInfo MethodInfo { get; set; } = methodInfo;
+        public DescriptorBase[] Args { get; set; } = args;
     }
 }

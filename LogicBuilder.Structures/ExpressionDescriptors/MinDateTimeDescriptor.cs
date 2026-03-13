@@ -1,9 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MinDateTimeDescriptor : IExpressionDescriptor
+    public class MinDateTimeDescriptor : DescriptorBase
     {
-		public MinDateTimeDescriptor()
-		{
-		}
     }
 }

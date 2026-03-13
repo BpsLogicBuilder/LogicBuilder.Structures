@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class WhereDescriptor : FilterMethodDescriptorBase
+    public class WhereDescriptor(DescriptorBase sourceOperand, DescriptorBase filterBody, string filterParameterName) : FilterMethodDescriptorBase(sourceOperand, filterBody, filterParameterName)
     {
-		public WhereDescriptor()
-		{
-		}
-
-		public WhereDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor filterBody, string filterParameterName) : base(sourceOperand, filterBody, filterParameterName)
-		{
-		}
     }
 }

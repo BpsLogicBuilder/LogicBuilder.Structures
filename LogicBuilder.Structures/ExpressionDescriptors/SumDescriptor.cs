@@ -1,17 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SumDescriptor : SelectorMethodDescriptorBase
+    public class SumDescriptor(DescriptorBase sourceOperand, DescriptorBase? selectorBody = null, string? selectorParameterName = null) : SelectorMethodDescriptorBase(sourceOperand, selectorBody, selectorParameterName)
     {
-		public SumDescriptor()
-		{
-		}
-
-		public SumDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor selectorBody, string selectorParameterName) : base(sourceOperand, selectorBody, selectorParameterName)
-		{
-		}
-
-		public SumDescriptor(IExpressionDescriptor sourceOperand) : base(sourceOperand)
-		{
-		}
     }
 }

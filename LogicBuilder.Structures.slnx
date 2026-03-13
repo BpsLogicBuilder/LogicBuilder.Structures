@@ -5,5 +5,6 @@
     <File Path=".github/workflows/release.yml" />
     <File Path="CHANGELOG.md" />
   </Folder>
+  <Project Path="LogicBuilder.Structures.Tests/LogicBuilder.Structures.Tests.csproj" Id="189f3203-8313-4710-863a-3d95dea3ecd8" />
   <Project Path="LogicBuilder.Structures/LogicBuilder.Structures.csproj" />
 </Solution>

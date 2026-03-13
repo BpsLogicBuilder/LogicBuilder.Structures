@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ConvertToNumericTimeDescriptor : IExpressionDescriptor
+    public class ConvertToNumericTimeDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-		public ConvertToNumericTimeDescriptor()
-		{
-		}
-
-		public ConvertToNumericTimeDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

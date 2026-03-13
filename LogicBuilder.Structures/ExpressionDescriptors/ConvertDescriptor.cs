@@ -2,19 +2,9 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ConvertDescriptor : IExpressionDescriptor
+    public class ConvertDescriptor(DescriptorBase sourceOperand, string type) : DescriptorBase
     {
-		public ConvertDescriptor()
-		{
-		}
-
-		public ConvertDescriptor(IExpressionDescriptor sourceOperand, Type type)
-		{
-			SourceOperand = sourceOperand;
-			Type = type;
-		}
-
-		public Type Type { get; set; }
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public string Type { get; set; } = type;
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

@@ -3,19 +3,9 @@ using System;
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CollectionConstantDescriptor : IExpressionDescriptor
+    public class CollectionConstantDescriptor(ICollection<object> constantValues, string elementType) : DescriptorBase
     {
-		public CollectionConstantDescriptor()
-		{
-		}
-
-		public CollectionConstantDescriptor(ICollection<object> constantValues, Type elementType)
-		{
-			ConstantValues = constantValues;
-			ElementType = elementType;
-		}
-
-		public Type ElementType { get; set; }
-		public ICollection<object> ConstantValues { get; set; }
+        public string ElementType { get; set; } = elementType;
+        public ICollection<object> ConstantValues { get; set; } = constantValues;
     }
 }

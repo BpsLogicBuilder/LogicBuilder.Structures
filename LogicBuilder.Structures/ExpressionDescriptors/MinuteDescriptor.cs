@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MinuteDescriptor : IExpressionDescriptor
+    public class MinuteDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public MinuteDescriptor()
-		{
-		}
-
-		public MinuteDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

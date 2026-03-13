@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class TrimDescriptor : IExpressionDescriptor
+    public class TrimDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public TrimDescriptor()
-		{
-		}
-
-		public TrimDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

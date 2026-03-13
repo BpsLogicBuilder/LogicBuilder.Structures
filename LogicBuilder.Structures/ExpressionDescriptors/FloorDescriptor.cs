@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class FloorDescriptor : IExpressionDescriptor
+    public class FloorDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public FloorDescriptor()
-		{
-		}
-
-		public FloorDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SkipDescriptor : IExpressionDescriptor
+    public class SkipDescriptor(DescriptorBase sourceOperand, int count) : DescriptorBase
     {
-		public SkipDescriptor()
-		{
-		}
-
-		public SkipDescriptor(IExpressionDescriptor sourceOperand, int count)
-		{
-			SourceOperand = sourceOperand;
-			Count = count;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
-		public int Count { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+        public int Count { get; set; } = count;
     }
 }

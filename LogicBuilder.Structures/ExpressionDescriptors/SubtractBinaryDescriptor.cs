@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SubtractBinaryDescriptor : BinaryDescriptor
+    public class SubtractBinaryDescriptor(DescriptorBase left, DescriptorBase right) : BinaryDescriptor(left, right)
     {
-		public SubtractBinaryDescriptor()
-		{
-		}
-
-		public SubtractBinaryDescriptor(IExpressionDescriptor left, IExpressionDescriptor right) : base(left, right)
-		{
-		}
     }
 }

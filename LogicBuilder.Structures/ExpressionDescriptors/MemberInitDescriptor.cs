@@ -3,24 +3,9 @@ using System;
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MemberInitDescriptor : IExpressionDescriptor
+    public class MemberInitDescriptor(IDictionary<string, DescriptorBase> memberBindings, string? newType) : DescriptorBase
     {
-		public MemberInitDescriptor()
-		{
-		}
-
-		public MemberInitDescriptor(IDictionary<string, IExpressionDescriptor> memberBindings, Type newType)
-		{
-			MemberBindings = memberBindings;
-			NewType = newType;
-		}
-
-		public MemberInitDescriptor(IDictionary<string, IExpressionDescriptor> memberBindings)
-		{
-			MemberBindings = memberBindings;
-		}
-
-		public IDictionary<string, IExpressionDescriptor> MemberBindings { get; set; }
-		public Type NewType { get; set; }
+        public IDictionary<string, DescriptorBase> MemberBindings { get; set; } = memberBindings;
+        public string? NewType { get; set; } = newType;
     }
 }

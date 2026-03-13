@@ -1,19 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.Strutures
 {
-    public class SortDescription
+    public class SortDescription(string propertyName, ListSortDirection order)
     {
-        public SortDescription()
-        {
-
-        }
-
-        public SortDescription(string propertyName, ListSortDirection order)
-        {
-            this.PropertyName = propertyName;
-            this.SortDirection = order;
-        }
-
-        public string PropertyName { get; set; }
-        public ListSortDirection SortDirection { get; set; }
+        public string PropertyName { get; set; } = propertyName;
+        public ListSortDirection SortDirection { get; set; } = order;
     }
 }

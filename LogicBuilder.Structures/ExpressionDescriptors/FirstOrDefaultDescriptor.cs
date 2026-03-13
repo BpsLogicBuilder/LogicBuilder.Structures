@@ -1,17 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class FirstOrDefaultDescriptor : FilterMethodDescriptorBase
+    public class FirstOrDefaultDescriptor(DescriptorBase sourceOperand, DescriptorBase? filterBody = null, string? filterParameterName = null) : FilterMethodDescriptorBase(sourceOperand, filterBody, filterParameterName)
     {
-		public FirstOrDefaultDescriptor()
-		{
-		}
-
-		public FirstOrDefaultDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor filterBody, string filterParameterName) : base(sourceOperand, filterBody, filterParameterName)
-		{
-		}
-
-		public FirstOrDefaultDescriptor(IExpressionDescriptor sourceOperand) : base(sourceOperand)
-		{
-		}
     }
 }

@@ -1,9 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MaxDateTimeDescriptor : IExpressionDescriptor
+    public class MaxDateTimeDescriptor : DescriptorBase
     {
-		public MaxDateTimeDescriptor()
-		{
-		}
     }
 }
