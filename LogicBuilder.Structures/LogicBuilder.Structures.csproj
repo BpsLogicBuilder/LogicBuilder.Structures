@@ -4,16 +4,23 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Expressions.Utils</RootNamespace>
     <PackageId>LogicBuilder.Structures</PackageId>
-    <Authors>BlaiseD</Authors>
-    <Description>LogicBuilder.Structures includes classes used by multiple components in the LogicBuilder data stack.</Description>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Supporting .NET 10.0.</PackageReleaseNotes>
+		<Authors>BlaiseD</Authors>
+		<LangVersion>latest</LangVersion>
+		<WarningsAsErrors>true</WarningsAsErrors>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <Description>LogicBuilder.Structures is a comprehensive metadata library for building dynamic LINQ expressions through descriptors. This library provides a rich set of classes that represent expression components, enabling the construction of complex LINQ queries from serializable metadata structures.</Description>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>Refactoring to optimize DevOps.</PackageReleaseNotes>
     <PackageTags>logicbuilder</PackageTags>
     <Copyright>Copyright © BPS 2019</Copyright>
-    <RepositoryUrl>https://github.com/BpsLogicBuilder/LogicBuilder.DataComponents</RepositoryUrl>
+    <RepositoryUrl>https://github.com/BpsLogicBuilder/LogicBuilder.Structures</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/BpsLogicBuilder/LogicBuilder</PackageProjectUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>icon.png</PackageIcon>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
     <MinVerTagPrefix>v</MinVerTagPrefix>
@@ -22,7 +29,8 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<None Include="docs\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\icon.png" Pack="true" PackagePath="\" Visible="False" />
 	</ItemGroup>
 
   <ItemGroup>
