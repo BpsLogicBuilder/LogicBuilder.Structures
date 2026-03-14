@@ -13,7 +13,7 @@ namespace LogicBuilder.Structures.Tests.Helpers
 
         public static Type CreateAnonymousType(IDictionary<string, Type> memberDetails)
         {
-            AssemblyName dynamicAssemblyName = new AssemblyName(TempAssemblyName);
+            AssemblyName dynamicAssemblyName = new(TempAssemblyName);
             AssemblyBuilder dynamicAssembly = AssemblyBuilder.DefineDynamicAssembly(dynamicAssemblyName, AssemblyBuilderAccess.Run);
             ModuleBuilder dynamicModule = dynamicAssembly.DefineDynamicModule(TempAssemblyName);
             TypeBuilder typeBuilder = dynamicModule.DefineType(GetAnonymousTypeName(), TypeAttributes.Public);
@@ -30,7 +30,7 @@ namespace LogicBuilder.Structures.Tests.Helpers
                         FieldBuilder = typeBuilder.DefineField(string.Concat("_", memberName), memberType, FieldAttributes.Private),
                         PropertyBuilder = typeBuilder.DefineProperty(memberName, PropertyAttributes.HasDefault, memberType, null),
                         GetMethodBuilder = typeBuilder.DefineMethod(string.Concat("get_", memberName), getSetAttr, memberType, Type.EmptyTypes),
-                        SetMethodBuilder = typeBuilder.DefineMethod(string.Concat("set_", memberName), getSetAttr, null, new Type[] { memberType })
+                        SetMethodBuilder = typeBuilder.DefineMethod(string.Concat("set_", memberName), getSetAttr, null, [memberType])
                     };
                 }
             );

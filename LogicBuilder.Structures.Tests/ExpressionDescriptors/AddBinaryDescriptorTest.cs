@@ -2,7 +2,7 @@
 using LogicBuilder.Structures.Tests.Helpers;
 using System.Text.Json;
 
-namespace LogicBuilder.Structures.Tests
+namespace LogicBuilder.Structures.Tests.ExpressionDescriptors
 {
     public class AddBinaryDescriptorTest
     {
@@ -15,7 +15,7 @@ namespace LogicBuilder.Structures.Tests
             var descriptor = new AddBinaryDescriptor
             (
                 new MemberSelectorDescriptor("UnitPrice", new ParameterDescriptor(parameterName)),
-                new ConstantDescriptor(1.00m, typeof(decimal).FullName)
+                new ConstantDescriptor(1.00m, typeof(decimal).AssemblyQualifiedName)
             );
 
             // Act

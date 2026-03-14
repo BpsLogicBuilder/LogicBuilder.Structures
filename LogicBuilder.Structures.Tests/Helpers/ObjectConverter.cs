@@ -29,11 +29,7 @@ namespace LogicBuilder.Structures.Tests.Helpers
                 case JsonTokenType.Comment:
                     throw new JsonException();
                 case JsonTokenType.Number:
-                    if (reader.TryGetByte(out byte byteValue))
-                        return byteValue;
-                    else if (reader.TryGetInt16(out short shortValue))
-                        return shortValue;
-                    else if (reader.TryGetInt32(out int intValue))
+                    if (reader.TryGetInt32(out int intValue))
                         return intValue;
                     else if (reader.TryGetInt64(out long longValue))
                         return longValue;
@@ -70,7 +66,7 @@ namespace LogicBuilder.Structures.Tests.Helpers
             }
 
             JsonElement.ObjectEnumerator objectEnumerator = jsonDocument.RootElement.EnumerateObject();
-            IDictionary<string, Type> types = new Dictionary<string, Type>();
+            Dictionary<string, Type> types = [];
             foreach (var obj in objectEnumerator)
             {
                 types.Add(obj.Name, MapValueKind(obj.Value));
