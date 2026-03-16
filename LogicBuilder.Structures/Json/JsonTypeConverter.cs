@@ -21,19 +21,19 @@ namespace LogicBuilder.Expressions.Utils.Json
                 throw new JsonException();
 
             using var jsonDocument = JsonDocument.ParseValue(ref reader);
-            JsonProperty jsonProperty = GetJsonProperty();
-            if (jsonProperty.Equals(default(JsonProperty)))
+            JsonProperty typeJsonProperty = GetTypeJsonProperty();
+            if (typeJsonProperty.Equals(default(JsonProperty)))
                 throw new JsonException();
 
-            JsonProperty GetJsonProperty()
+            JsonProperty GetTypeJsonProperty()
                 => jsonDocument.RootElement.EnumerateObject().FirstOrDefault(e => e.Name.ToLowerInvariant() == TypePropertyName.ToLowerInvariant());
 
-            return (T)(JsonSerializer.Deserialize
+            return (T)JsonSerializer.Deserialize
             (
                 jsonDocument.RootElement.GetRawText(),
-                Type.GetType(jsonProperty.Value.GetString()),
+                Type.GetType(typeJsonProperty.Value.GetString()) ?? throw new InvalidOperationException($"Type cannot be loaded for {typeJsonProperty.Value.GetString()}."),
                 options
-            ) ?? throw new JsonException("Deserialize result cannot be null"));
+            )!;//never null because only valid JSON like "null" can return null.  For this method, the JsonTokenType is always JsonTokenType.StartObject.
         }
 
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
