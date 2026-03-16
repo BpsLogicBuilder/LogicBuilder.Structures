@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class TimeDescriptor : IExpressionDescriptor
+    public class TimeDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public TimeDescriptor()
-		{
-		}
-
-		public TimeDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

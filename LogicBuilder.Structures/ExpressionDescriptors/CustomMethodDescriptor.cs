@@ -1,20 +1,10 @@
-﻿using System.Reflection;
-
-namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
+﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CustomMethodDescriptor : IExpressionDescriptor
+    public class CustomMethodDescriptor(string declaringType, string methodName, string[] parameterTypeNames, DescriptorBase[] args) : DescriptorBase
     {
-		public CustomMethodDescriptor()
-		{
-		}
-
-		public CustomMethodDescriptor(MethodInfo methodInfo, IExpressionDescriptor[] args)
-		{
-			MethodInfo = methodInfo;
-			Args = args;
-		}
-
-		public MethodInfo MethodInfo { get; set; }
-		public IExpressionDescriptor[] Args { get; set; }
+        public string DeclaringType { get; set; } = declaringType;
+        public string MethodName { get; set; } = methodName;
+        public string[] ParameterTypeNames { get; set; } = parameterTypeNames;
+        public DescriptorBase[] Args { get; set; } = args;
     }
 }

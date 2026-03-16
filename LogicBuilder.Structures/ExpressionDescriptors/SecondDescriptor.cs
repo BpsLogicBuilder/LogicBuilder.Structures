@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SecondDescriptor : IExpressionDescriptor
+    public class SecondDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public SecondDescriptor()
-		{
-		}
-
-		public SecondDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

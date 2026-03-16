@@ -1,27 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
+﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    abstract public class SelectorMethodDescriptorBase : IExpressionDescriptor
+    abstract public class SelectorMethodDescriptorBase(DescriptorBase sourceOperand, DescriptorBase? selectorBody = null, string? selectorParameterName = null) : DescriptorBase
     {
-		public SelectorMethodDescriptorBase()
-		{
-		}
-
-		public SelectorMethodDescriptorBase(IExpressionDescriptor sourceOperand, IExpressionDescriptor selectorBody, string selectorParameterName)
-		{
-			SourceOperand = sourceOperand;
-			SelectorBody = selectorBody;
-			SelectorParameterName = selectorParameterName;
-		}
-
-		public SelectorMethodDescriptorBase(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
-		public IExpressionDescriptor SelectorBody { get; set; }
-		public string SelectorParameterName { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+        public DescriptorBase? SelectorBody { get; set; } = selectorBody;
+        public string? SelectorParameterName { get; set; } = selectorParameterName;
     }
 }

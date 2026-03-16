@@ -1,13 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ModuloBinaryDescriptor : BinaryDescriptor
+    public class ModuloBinaryDescriptor(DescriptorBase left, DescriptorBase right) : BinaryDescriptor(left, right)
     {
-		public ModuloBinaryDescriptor()
-		{
-		}
-
-		public ModuloBinaryDescriptor(IExpressionDescriptor left, IExpressionDescriptor right) : base(left, right)
-		{
-		}
     }
 }

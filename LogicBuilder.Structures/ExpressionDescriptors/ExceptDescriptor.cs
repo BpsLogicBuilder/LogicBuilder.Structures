@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ExceptDescriptor : IExpressionDescriptor
+    public class ExceptDescriptor(DescriptorBase left, DescriptorBase right) : DescriptorBase
     {
-        public ExceptDescriptor()
-        {
-        }
-
-        public ExceptDescriptor(IExpressionDescriptor left, IExpressionDescriptor right)
-        {
-            Left = left;
-            Right = right;
-        }
-
-        public IExpressionDescriptor Left { get; set; }
-        public IExpressionDescriptor Right { get; set; }
+        public DescriptorBase Left { get; set; } = left;
+        public DescriptorBase Right { get; set; } = right;
     }
 }

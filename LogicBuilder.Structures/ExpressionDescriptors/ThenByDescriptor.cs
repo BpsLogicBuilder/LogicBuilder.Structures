@@ -2,17 +2,8 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ThenByDescriptor : SelectorMethodDescriptorBase
+    public class ThenByDescriptor(DescriptorBase sourceOperand, DescriptorBase selectorBody, ListSortDirection sortDirection, string selectorParameterName) : SelectorMethodDescriptorBase(sourceOperand, selectorBody, selectorParameterName)
     {
-		public ThenByDescriptor()
-		{
-		}
-
-		public ThenByDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor selectorBody, ListSortDirection sortDirection, string selectorParameterName) : base(sourceOperand, selectorBody, selectorParameterName)
-		{
-			SortDirection = sortDirection;
-		}
-
-		public ListSortDirection SortDirection { get; set; }
+        public ListSortDirection SortDirection { get; set; } = sortDirection;
     }
 }

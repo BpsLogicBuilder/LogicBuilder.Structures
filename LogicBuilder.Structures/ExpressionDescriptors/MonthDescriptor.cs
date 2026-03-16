@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MonthDescriptor : IExpressionDescriptor
+    public class MonthDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public MonthDescriptor()
-		{
-		}
-
-		public MonthDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

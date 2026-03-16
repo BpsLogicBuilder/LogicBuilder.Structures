@@ -1,28 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace LogicBuilder.Expressions.Utils.Strutures
 {
-    public class SortCollection
+    public class SortCollection(ICollection<SortDescription> sortDescriptions, int? skip = null, int? take = null)
     {
-        public SortCollection() { }
-        public SortCollection(ICollection<SortDescription> sortDescriptions)
-        {
-            this.SortDescriptions = sortDescriptions;
-            this.Skip = 0;
-            this.Take = int.MaxValue;
-        }
-
-        public SortCollection(ICollection<SortDescription> sortDescriptions, int skip, int take)
-        {
-            this.SortDescriptions = sortDescriptions;
-            this.Skip = skip;
-            this.Take = take <= 0 ? int.MaxValue : take;
-        }
-
-        public ICollection<SortDescription> SortDescriptions { get; set; }
-        public int Skip { get; set; }
-        public int Take { get; set; } = int.MaxValue;
+        public ICollection<SortDescription> SortDescriptions { get; set; } = sortDescriptions;
+        public int Skip { get; set; } = skip ?? 0;
+        public int Take { get; set; } = take ?? int.MaxValue;
     }
 }

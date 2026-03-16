@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ToLowerDescriptor : IExpressionDescriptor
+    public class ToLowerDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public ToLowerDescriptor()
-		{
-		}
-
-		public ToLowerDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,17 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class MinDescriptor : SelectorMethodDescriptorBase
+    public class MinDescriptor(DescriptorBase sourceOperand, DescriptorBase? selectorBody = null, string? selectorParameterName = null) : SelectorMethodDescriptorBase(sourceOperand, selectorBody, selectorParameterName)
     {
-		public MinDescriptor()
-		{
-		}
-
-		public MinDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor selectorBody, string selectorParameterName) : base(sourceOperand, selectorBody, selectorParameterName)
-		{
-		}
-
-		public MinDescriptor(IExpressionDescriptor sourceOperand) : base(sourceOperand)
-		{
-		}
     }
 }

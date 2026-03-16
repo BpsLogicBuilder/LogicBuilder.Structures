@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class InDescriptor : IExpressionDescriptor
+    public class InDescriptor(DescriptorBase itemToFind, DescriptorBase listToSearch) : DescriptorBase
     {
-		public InDescriptor()
-		{
-		}
-
-		public InDescriptor(IExpressionDescriptor itemToFind, IExpressionDescriptor listToSearch)
-		{
-			ItemToFind = itemToFind;
-			ListToSearch = listToSearch;
-		}
-
-		public IExpressionDescriptor ItemToFind { get; set; }
-		public IExpressionDescriptor ListToSearch { get; set; }
+        public DescriptorBase ItemToFind { get; set; } = itemToFind;
+        public DescriptorBase ListToSearch { get; set; } = listToSearch;
     }
 }

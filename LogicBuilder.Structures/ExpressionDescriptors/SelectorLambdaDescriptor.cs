@@ -2,30 +2,11 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SelectorLambdaDescriptor : IExpressionDescriptor
+    public class SelectorLambdaDescriptor(DescriptorBase selector, string sourceElementType, string parameterName, string? bodyType = null) : DescriptorBase
     {
-		public SelectorLambdaDescriptor()
-		{
-		}
-
-		public SelectorLambdaDescriptor(IExpressionDescriptor selector, Type sourceElementType, string parameterName)
-		{
-			Selector = selector;
-			SourceElementType = sourceElementType;
-			ParameterName = parameterName;
-		}
-
-		public SelectorLambdaDescriptor(IExpressionDescriptor selector, Type sourceElementType, Type bodyType, string parameterName)
-		{
-			Selector = selector;
-			SourceElementType = sourceElementType;
-			BodyType = bodyType;
-			ParameterName = parameterName;
-		}
-
-		public IExpressionDescriptor Selector { get; set; }
-		public Type SourceElementType { get; set; }
-		public Type BodyType { get; set; }
-		public string ParameterName { get; set; }
+        public DescriptorBase Selector { get; set; } = selector;
+        public string SourceElementType { get; set; } = sourceElementType;
+        public string? BodyType { get; set; } = bodyType;
+        public string ParameterName { get; set; } = parameterName;
     }
 }

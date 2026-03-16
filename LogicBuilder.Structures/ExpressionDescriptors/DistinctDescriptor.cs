@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class DistinctDescriptor : IExpressionDescriptor
+    public class DistinctDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-		public DistinctDescriptor()
-		{
-		}
-
-		public DistinctDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class DayDescriptor : IExpressionDescriptor
+    public class DayDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public DayDescriptor()
-		{
-		}
-
-		public DayDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

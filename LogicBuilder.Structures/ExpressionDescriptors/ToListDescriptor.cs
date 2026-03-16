@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ToListDescriptor : IExpressionDescriptor
+    public class ToListDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-		public ToListDescriptor()
-		{
-		}
-
-		public ToListDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

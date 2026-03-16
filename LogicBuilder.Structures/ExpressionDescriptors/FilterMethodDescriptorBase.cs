@@ -1,27 +1,9 @@
-﻿using System.Collections.Generic;
-
-namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
+﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    abstract public class FilterMethodDescriptorBase : IExpressionDescriptor
+    abstract public class FilterMethodDescriptorBase(DescriptorBase sourceOperand, DescriptorBase? filterBody = null, string? filterParameterName = null) : DescriptorBase
     {
-		public FilterMethodDescriptorBase()
-		{
-		}
-
-		public FilterMethodDescriptorBase(IExpressionDescriptor sourceOperand, IExpressionDescriptor filterBody, string filterParameterName)
-		{
-			SourceOperand = sourceOperand;
-			FilterBody = filterBody;
-			FilterParameterName = filterParameterName;
-		}
-
-		public FilterMethodDescriptorBase(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
-		public IExpressionDescriptor FilterBody { get; set; }
-		public string FilterParameterName { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+        public DescriptorBase? FilterBody { get; set; } = filterBody;
+        public string? FilterParameterName { get; set; } = filterParameterName;
     }
 }

@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class AsQueryableDescriptor : IExpressionDescriptor
+    public class AsQueryableDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-		public AsQueryableDescriptor()
-		{
-		}
-
-		public AsQueryableDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
     }
 }

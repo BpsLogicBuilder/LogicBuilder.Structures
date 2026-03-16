@@ -1,18 +1,8 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class SubstringDescriptor : IExpressionDescriptor
+    public class SubstringDescriptor(DescriptorBase sourceOperand, params DescriptorBase[] indexes) : DescriptorBase
     {
-		public SubstringDescriptor()
-		{
-		}
-
-		public SubstringDescriptor(IExpressionDescriptor sourceOperand, params IExpressionDescriptor[] indexes)
-		{
-			SourceOperand = sourceOperand;
-			Indexes = indexes;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
-		public IExpressionDescriptor[] Indexes { get; set; }
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+        public DescriptorBase[] Indexes { get; set; } = indexes;
     }
 }

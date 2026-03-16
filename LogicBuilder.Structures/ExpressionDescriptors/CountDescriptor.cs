@@ -1,17 +1,6 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CountDescriptor : FilterMethodDescriptorBase
+    public class CountDescriptor(DescriptorBase sourceOperand, DescriptorBase? filterBody = null, string? filterParameterName = null) : FilterMethodDescriptorBase(sourceOperand, filterBody, filterParameterName)
     {
-		public CountDescriptor()
-		{
-		}
-
-		public CountDescriptor(IExpressionDescriptor sourceOperand, IExpressionDescriptor filterBody, string filterParameterName) : base(sourceOperand, filterBody, filterParameterName)
-		{
-		}
-
-		public CountDescriptor(IExpressionDescriptor sourceOperand) : base(sourceOperand)
-		{
-		}
     }
 }

@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class RoundDescriptor : IExpressionDescriptor
+    public class RoundDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public RoundDescriptor()
-		{
-		}
-
-		public RoundDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

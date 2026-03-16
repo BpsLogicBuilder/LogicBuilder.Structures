@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ToUpperDescriptor : IExpressionDescriptor
+    public class ToUpperDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public ToUpperDescriptor()
-		{
-		}
-
-		public ToUpperDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

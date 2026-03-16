@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class TotalOffsetMinutesDescriptor : IExpressionDescriptor
+    public class TotalOffsetMinutesDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public TotalOffsetMinutesDescriptor()
-		{
-		}
-
-		public TotalOffsetMinutesDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

@@ -1,18 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
+﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class ParameterDescriptor : IExpressionDescriptor
+    public class ParameterDescriptor(string parameterName) : DescriptorBase
     {
-		public ParameterDescriptor()
-		{
-		}
-
-		public ParameterDescriptor(string parameterName)
-		{
-			ParameterName = parameterName;
-		}
-
-		public string ParameterName { get; set; }
+        public string ParameterName { get; set; } = parameterName;
     }
 }

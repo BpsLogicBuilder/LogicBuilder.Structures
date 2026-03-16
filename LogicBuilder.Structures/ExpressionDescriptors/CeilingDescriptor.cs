@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-    public class CeilingDescriptor : IExpressionDescriptor
+    public class CeilingDescriptor(DescriptorBase operand) : DescriptorBase
     {
-		public CeilingDescriptor()
-		{
-		}
-
-		public CeilingDescriptor(IExpressionDescriptor operand)
-		{
-			Operand = operand;
-		}
-
-		public IExpressionDescriptor Operand { get; set; }
+        public DescriptorBase Operand { get; set; } = operand;
     }
 }

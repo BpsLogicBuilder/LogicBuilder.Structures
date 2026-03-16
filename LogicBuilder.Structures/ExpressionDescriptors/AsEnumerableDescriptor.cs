@@ -1,16 +1,7 @@
 ﻿namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
-	public class AsEnumerableDescriptor : IExpressionDescriptor
+	public class AsEnumerableDescriptor(DescriptorBase sourceOperand) : DescriptorBase
 	{
-		public AsEnumerableDescriptor()
-		{
-		}
-
-		public AsEnumerableDescriptor(IExpressionDescriptor sourceOperand)
-		{
-			SourceOperand = sourceOperand;
-		}
-
-		public IExpressionDescriptor SourceOperand { get; set; }
-	}
+        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+    }
 }
