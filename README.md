@@ -1,5 +1,11 @@
 # LogicBuilder.Structures
 
+[![CI](https://github.com/BpsLogicBuilder/LogicBuilder.Structures/actions/workflows/ci.yml/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Structures/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/BpsLogicBuilder/LogicBuilder.Structures/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/BpsLogicBuilder/LogicBuilder.Structures/actions/workflows/github-code-scanning/codeql)
+[![codecov](https://codecov.io/gh/BpsLogicBuilder/LogicBuilder.Structures/graph/badge.svg?token=UAV0UB5NLC)](https://codecov.io/gh/BpsLogicBuilder/LogicBuilder.Structures)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BpsLogicBuilder_LogicBuilder.Structures&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BpsLogicBuilder_LogicBuilder.Structures)
+[![NuGet](https://img.shields.io/nuget/v/LogicBuilder.Structures.svg)](https://www.nuget.org/packages/LogicBuilder.Structures)
+
 A comprehensive metadata library for building dynamic LINQ expressions through descriptors. This library provides a rich set of classes that represent expression components, enabling the construction of complex LINQ queries from serializable metadata structures.
 
 ## Purpose
