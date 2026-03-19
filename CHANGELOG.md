@@ -1,4 +1,5 @@
-* 2036-03-16 - AB#82: Add CodeCov and testing to workflows rand badges to README.md.
+* 2026-03-19 - AB#101: Update Codecov action and coverlet.msbuild version
+* 2036-03-16 - AB#82: Add CodeCov and testing to workflows and badges to README.md.
 * 2026-03-16 - AB#81 Removing data classes from the test project.
 * 2026-03-16 - AB#81: Add select/expand and sort descriptors with tests.
 * 2026-03-14 - AB#81: Add serialization tests for expression descriptors.
