@@ -34,5 +34,30 @@ namespace LogicBuilder.Structures.Tests.ExpressionDescriptors
             Assert.IsType<MemberSelectorDescriptor>(deserializedDescriptor.MemberBindings["Name"]);
             Assert.IsType<ConstantDescriptor>(deserializedDescriptor.MemberBindings["Age"]);
         }
+
+        [Fact]
+        public void CanSerializeAndDeserialize_MemberInitDescriptor_WithOptionalParameter()
+        {
+            // Arrange
+            var descriptor = new MemberInitDescriptor
+            (
+                new Dictionary<string, DescriptorBase>
+                {
+                    ["Name"] = new MemberSelectorDescriptor("FirstName", new ParameterDescriptor(parameterName)),
+                    ["Age"] = new ConstantDescriptor(25, typeof(int).AssemblyQualifiedName)
+                }
+            );
+
+            // Act
+            string json = JsonSerializer.Serialize(descriptor);
+            var deserializedDescriptor = JsonSerializer.Deserialize<MemberInitDescriptor>(json, SerializationOptions.Default);
+
+            // Assert
+            Assert.NotNull(deserializedDescriptor);
+            Assert.Equal(2, deserializedDescriptor.MemberBindings.Count);
+            Assert.Null(deserializedDescriptor.NewType);
+            Assert.IsType<MemberSelectorDescriptor>(deserializedDescriptor.MemberBindings["Name"]);
+            Assert.IsType<ConstantDescriptor>(deserializedDescriptor.MemberBindings["Age"]);
+        }
     }
 }
