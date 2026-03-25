@@ -58,7 +58,7 @@ LogicBuilder.Structures serves as the metadata foundation for the LogicBuilder.E
 
 ### Type Operations
 
-- **Casting**: `CastDescriptor`, `ConvertDescriptor`, `CollectionCastDescriptor`
+- **Casting**: `CastDescriptor`, `ConvertDescriptor`, `CollectionCastDescriptor`, `CollectionOfTypeDescriptor`
 - **Type Checking**: `IsOfDescriptor`
 - **Conversions**: `ConvertToStringDescriptor`, `ConvertToEnumDescriptor`, `ConvertToNullableUnderlyingValueDescriptor`
 

@@ -1,3 +1,4 @@
+* 2026-03-25 - AB#97: Add CollectionOfTypeDescriptor to casting ops in README.
 * 2026-03-24 - AB#97: Add CollectionOfTypeDescriptor and serialization test.
 * 2026-03-24 - AB#97: Make newType optional in MemberInitDescriptor constructor.
 * 2026-03-19 - AB#101: Update Codecov action and coverlet.msbuild version
