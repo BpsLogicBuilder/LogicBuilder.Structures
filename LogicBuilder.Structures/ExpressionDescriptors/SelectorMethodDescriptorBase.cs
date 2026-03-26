@@ -2,8 +2,8 @@
 {
     abstract public class SelectorMethodDescriptorBase(DescriptorBase sourceOperand, DescriptorBase? selectorBody = null, string? selectorParameterName = null) : DescriptorBase
     {
-        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
-        public DescriptorBase? SelectorBody { get; set; } = selectorBody;
-        public string? SelectorParameterName { get; set; } = selectorParameterName;
+        public DescriptorBase SourceOperand { get; } = sourceOperand;
+        public virtual DescriptorBase? SelectorBody { get; } = selectorBody;
+        public virtual string? SelectorParameterName { get; } = selectorParameterName;
     }
 }

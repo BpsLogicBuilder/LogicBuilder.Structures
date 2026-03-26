@@ -2,8 +2,8 @@
 {
     abstract public class FilterMethodDescriptorBase(DescriptorBase sourceOperand, DescriptorBase? filterBody = null, string? filterParameterName = null) : DescriptorBase
     {
-        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
-        public DescriptorBase? FilterBody { get; set; } = filterBody;
-        public string? FilterParameterName { get; set; } = filterParameterName;
+        public DescriptorBase SourceOperand { get; } = sourceOperand;
+        public virtual DescriptorBase? FilterBody { get; } = filterBody;
+        public virtual string? FilterParameterName { get; } = filterParameterName;
     }
 }
