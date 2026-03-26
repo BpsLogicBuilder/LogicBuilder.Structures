@@ -4,6 +4,8 @@ namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
     public class ThenByDescriptor(DescriptorBase sourceOperand, DescriptorBase selectorBody, ListSortDirection sortDirection, string selectorParameterName) : SelectorMethodDescriptorBase(sourceOperand, selectorBody, selectorParameterName)
     {
-        public ListSortDirection SortDirection { get; set; } = sortDirection;
+        public ListSortDirection SortDirection { get; } = sortDirection;
+        public override DescriptorBase SelectorBody { get; } = selectorBody;
+        public override string SelectorParameterName { get; } = selectorParameterName;
     }
 }
