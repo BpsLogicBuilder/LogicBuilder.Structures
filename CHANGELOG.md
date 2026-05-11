@@ -1,3 +1,5 @@
+* 2026-05-11 - AB#132: Update release notes to reflect constructor param bug fix.
+* 2026-05-11 - AB#132: Rename SortDescription ctor param 'order' to 'sortDirection'.
 * 2026-03-31 - AB#104: Replacing automatic Sonar analysis with CI integration.
 * 2026-03-26 - AB#95: Allow non-nullable properties in Descriptor subclasses.
 * 2026-03-25 - AB#97: Add CollectionOfTypeDescriptor to casting ops in README.
