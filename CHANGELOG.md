@@ -1,3 +1,4 @@
+* 2026-06-09 - AB#166: Address Sonar findings.
 * 2026-06-09 - AB#166: Make constant descriptor parameters nullable.
 * 2026-05-11 - AB#132: Update release notes to reflect constructor param bug fix.
 * 2026-05-11 - AB#132: Rename SortDescription ctor param 'order' to 'sortDirection'.
@@ -7,7 +8,7 @@
 * 2026-03-24 - AB#97: Add CollectionOfTypeDescriptor and serialization test.
 * 2026-03-24 - AB#97: Make newType optional in MemberInitDescriptor constructor.
 * 2026-03-19 - AB#101: Update Codecov action and coverlet.msbuild version
-* 2036-03-16 - AB#82: Add CodeCov and testing to workflows and badges to README.md.
+* 2026-03-16 - AB#82: Add CodeCov and testing to workflows and badges to README.md.
 * 2026-03-16 - AB#81 Removing data classes from the test project.
 * 2026-03-16 - AB#81: Add select/expand and sort descriptors with tests.
 * 2026-03-14 - AB#81: Add serialization tests for expression descriptors.

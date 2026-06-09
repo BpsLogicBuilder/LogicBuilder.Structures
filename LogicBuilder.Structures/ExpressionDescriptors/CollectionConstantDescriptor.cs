@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System;
 
 namespace LogicBuilder.Expressions.Utils.ExpressionDescriptors
 {
