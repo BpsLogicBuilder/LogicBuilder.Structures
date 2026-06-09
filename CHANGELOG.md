@@ -1,3 +1,4 @@
+* 2026-06-09 - AB#166: Updating the release notes.
 * 2026-06-09 - AB#166: Address Sonar findings.
 * 2026-06-09 - AB#166: Make constant descriptor parameters nullable.
 * 2026-05-11 - AB#132: Update release notes to reflect constructor param bug fix.
