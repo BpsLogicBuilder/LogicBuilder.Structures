@@ -1,3 +1,4 @@
+* 2026-06-09 - AB#166: Make constant descriptor parameters nullable.
 * 2026-05-11 - AB#132: Update release notes to reflect constructor param bug fix.
 * 2026-05-11 - AB#132: Rename SortDescription ctor param 'order' to 'sortDirection'.
 * 2026-03-31 - AB#104: Replacing automatic Sonar analysis with CI integration.
