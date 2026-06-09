@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Threading;
 
 namespace LogicBuilder.Structures.Tests.Helpers
 {
@@ -56,6 +57,6 @@ namespace LogicBuilder.Structures.Tests.Helpers
         }
 
         private static string GetAnonymousTypeName()
-            => $"AnonymousType{++classCount}";
+            => $"AnonymousType{Interlocked.Increment(ref classCount)}";
     }
 }
