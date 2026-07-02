@@ -27,7 +27,7 @@ namespace LogicBuilder.Structures.Tests.ExpressionDescriptors
             Assert.IsType<MemberSelectorDescriptor>(deserializedDescriptor.Left);
             Assert.IsType<ConstantDescriptor>(deserializedDescriptor.Right);
             Assert.Equal("Price", ((MemberSelectorDescriptor)deserializedDescriptor.Left).MemberFullName);
-            Assert.Equal(10.00m, (decimal)((ConstantDescriptor)deserializedDescriptor.Right).ConstantValue);
+            Assert.Equal(10.00m, (decimal)((ConstantDescriptor)deserializedDescriptor.Right).ConstantValue!);
         }
     }
 }

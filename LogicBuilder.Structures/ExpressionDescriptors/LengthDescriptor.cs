@@ -2,6 +2,6 @@
 {
     public class LengthDescriptor(DescriptorBase operand) : DescriptorBase
     {
-        public DescriptorBase Operand { get; set; } = operand;
+        public DescriptorBase Operand { get; } = operand;
     }
 }
