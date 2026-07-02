@@ -2,6 +2,6 @@
 {
     public class ToLowerDescriptor(DescriptorBase operand) : DescriptorBase
     {
-        public DescriptorBase Operand { get; set; } = operand;
+        public DescriptorBase Operand { get; } = operand;
     }
 }

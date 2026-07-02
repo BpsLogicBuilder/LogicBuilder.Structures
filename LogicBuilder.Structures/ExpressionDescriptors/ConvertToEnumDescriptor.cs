@@ -2,7 +2,7 @@
 {
     public class ConvertToEnumDescriptor(object? constantValue, string type) : DescriptorBase
     {
-        public string Type { get; set; } = type;
-        public object? ConstantValue { get; set; } = constantValue;
+        public string Type { get; } = type;
+        public object? ConstantValue { get; } = constantValue;
     }
 }

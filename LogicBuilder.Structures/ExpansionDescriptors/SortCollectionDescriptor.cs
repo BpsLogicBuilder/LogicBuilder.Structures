@@ -2,10 +2,10 @@
 
 namespace LogicBuilder.Expressions.Utils.ExpansionDescriptors
 {
-    public class SortCollectionDescriptor(ICollection<SortDescriptionDescriptor> sortDescriptions, int skip = 0, int take = int.MaxValue)
+    public class SortCollectionDescriptor(ICollection<SortDescriptionDescriptor> sortDescriptions, int? skip = null, int? take = null)
     {
-        public ICollection<SortDescriptionDescriptor> SortDescriptions { get; set; } = sortDescriptions;
-        public int Skip { get; set; } = skip;
-        public int Take { get; set; } = take;
+        public ICollection<SortDescriptionDescriptor> SortDescriptions { get; } = sortDescriptions;
+        public int? Skip { get; } = skip;
+        public int? Take { get; } = take;
     }
 }

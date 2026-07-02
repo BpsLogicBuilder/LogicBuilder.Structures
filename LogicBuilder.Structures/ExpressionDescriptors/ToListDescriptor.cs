@@ -2,6 +2,6 @@
 {
     public class ToListDescriptor(DescriptorBase sourceOperand) : DescriptorBase
     {
-        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
+        public DescriptorBase SourceOperand { get; } = sourceOperand;
     }
 }

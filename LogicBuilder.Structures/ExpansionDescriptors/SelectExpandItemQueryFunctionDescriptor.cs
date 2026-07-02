@@ -2,6 +2,6 @@
 {
     public class SelectExpandItemQueryFunctionDescriptor(SortCollectionDescriptor sortCollection)
     {
-        public SortCollectionDescriptor SortCollection { get; set; } = sortCollection;
+        public SortCollectionDescriptor SortCollection { get; } = sortCollection;
     }
 }

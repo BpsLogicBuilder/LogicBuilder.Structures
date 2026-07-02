@@ -2,6 +2,6 @@
 {
     public class ParameterDescriptor(string parameterName) : DescriptorBase
     {
-        public string ParameterName { get; set; } = parameterName;
+        public string ParameterName { get; } = parameterName;
     }
 }

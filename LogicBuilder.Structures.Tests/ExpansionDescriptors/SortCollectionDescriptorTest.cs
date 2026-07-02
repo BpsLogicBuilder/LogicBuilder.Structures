@@ -41,5 +41,37 @@ namespace LogicBuilder.Structures.Tests.ExpansionDescriptors
             Assert.Equal("CreatedDate", sortList[2].PropertyName);
             Assert.Equal(ListSortDirection.Descending, sortList[2].SortDirection);
         }
+
+        [Fact]
+        public void CanSerializeAndDeserialize_SortCollectionDescriptor_With_Default_Values()
+        {
+            // Arrange
+            var descriptor = new SortCollectionDescriptor
+            (
+                [
+                    new SortDescriptionDescriptor("Name", ListSortDirection.Ascending),
+                    new SortDescriptionDescriptor("Age", ListSortDirection.Descending),
+                    new SortDescriptionDescriptor("CreatedDate", ListSortDirection.Descending)
+                ]
+            );
+
+            // Act
+            string json = JsonSerializer.Serialize(descriptor);
+            var deserializedDescriptor = JsonSerializer.Deserialize<SortCollectionDescriptor>(json, SerializationOptions.Default);
+
+            // Assert
+            Assert.NotNull(deserializedDescriptor);
+            Assert.Equal(3, deserializedDescriptor.SortDescriptions.Count);
+            Assert.Null(deserializedDescriptor.Skip);
+            Assert.Null(deserializedDescriptor.Take);
+
+            var sortList = new List<SortDescriptionDescriptor>(deserializedDescriptor.SortDescriptions);
+            Assert.Equal("Name", sortList[0].PropertyName);
+            Assert.Equal(ListSortDirection.Ascending, sortList[0].SortDirection);
+            Assert.Equal("Age", sortList[1].PropertyName);
+            Assert.Equal(ListSortDirection.Descending, sortList[1].SortDirection);
+            Assert.Equal("CreatedDate", sortList[2].PropertyName);
+            Assert.Equal(ListSortDirection.Descending, sortList[2].SortDirection);
+        }
     }
 }

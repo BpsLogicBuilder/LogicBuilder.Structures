@@ -2,7 +2,7 @@
 {
     public class HasDescriptor(DescriptorBase left, DescriptorBase right) : DescriptorBase
     {
-        public DescriptorBase Left { get; set; } = left;
-        public DescriptorBase Right { get; set; } = right;
+        public DescriptorBase Left { get; } = left;
+        public DescriptorBase Right { get; } = right;
     }
 }

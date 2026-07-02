@@ -4,7 +4,7 @@ namespace LogicBuilder.Expressions.Utils.ExpansionDescriptors
 {
     public class SortDescriptionDescriptor(string propertyName, ListSortDirection sortDirection)
     {
-        public string PropertyName { get; set; } = propertyName;
-        public ListSortDirection SortDirection { get; set; } = sortDirection;
+        public string PropertyName { get; } = propertyName;
+        public ListSortDirection SortDirection { get; } = sortDirection;
     }
 }

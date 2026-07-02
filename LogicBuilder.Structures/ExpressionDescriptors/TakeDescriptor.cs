@@ -2,7 +2,7 @@
 {
     public class TakeDescriptor(DescriptorBase sourceOperand, int count) : DescriptorBase
     {
-        public DescriptorBase SourceOperand { get; set; } = sourceOperand;
-        public int Count { get; set; } = count;
+        public DescriptorBase SourceOperand { get; } = sourceOperand;
+        public int Count { get; } = count;
     }
 }
