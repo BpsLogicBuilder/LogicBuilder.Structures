@@ -1,3 +1,4 @@
+* 2026-10-01 - AB#239: Addressing security advisory for unsafe deserialization.
 * 2026-07-02 - AB#173: Updating the release notes.
 * 2026-07-02 - AB#173: SortCollectionDescriptor fields should match operators and parameters.
 * 2026-06-09 - AB#166: Updating the release notes.
