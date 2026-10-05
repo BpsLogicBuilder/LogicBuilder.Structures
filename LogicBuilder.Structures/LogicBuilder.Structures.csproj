@@ -14,7 +14,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
     <Description>LogicBuilder.Structures is a comprehensive metadata library for building dynamic LINQ expressions through descriptors. This library provides a rich set of classes that represent expression components, enabling the construction of complex LINQ queries from serializable metadata structures.</Description>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-		<PackageReleaseNotes>Remediate unsafe deserialization of descriptor.</PackageReleaseNotes>
+		<PackageReleaseNotes>Fix generics support in unsafe deserialization of descriptor.</PackageReleaseNotes>
     <PackageTags>logicbuilder</PackageTags>
     <Copyright>Copyright © BPS 2019</Copyright>
     <RepositoryUrl>https://github.com/BpsLogicBuilder/LogicBuilder.Structures</RepositoryUrl>
