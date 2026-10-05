@@ -1,3 +1,5 @@
+* 2026-10-05 - AB#239: Fixing SonarQube recommendation.
+* 2026-10-05 - AB#239: Handling generic sub type for unsafe deserialization.
 * 2026-10-01 - AB#239: Updating the release notes.
 * 2026-10-01 - AB#239: Addressing security advisory for unsafe deserialization.
 * 2026-07-02 - AB#173: Updating the release notes.

@@ -83,7 +83,9 @@ namespace LogicBuilder.Expressions.Utils.Json
         public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
         {
             Type type = value?.GetType() ?? throw new InvalidOperationException("Type cannot be null");
-            if (!knownTypes.TryGetValue(typeNameHelper.GetKey(type), out Type? knownType) || knownType != type)
+            Type lookupType = type.IsGenericType ? type.GetGenericTypeDefinition() : type;
+
+            if (!knownTypes.TryGetValue(typeNameHelper.GetKey(lookupType), out Type? knownType) || knownType != lookupType)
                 throw new JsonException($"Type \"{type.AssemblyQualifiedName}\" is not an allowed type for {typeof(T).FullName}.");
 
             JsonSerializer.Serialize(writer, value, type, options);

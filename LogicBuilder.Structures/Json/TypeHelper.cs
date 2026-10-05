@@ -45,7 +45,7 @@ namespace LogicBuilder.Expressions.Utils.Json
         public Type? ResolveType(string typeString, IReadOnlyDictionary<string, Type> knownTypes)
         {
             string? key = typeNameHelper.GetKey(typeString);
-            return key != null && knownTypes.TryGetValue(key, out Type? type) ? type : null;
+            return key != null && knownTypes.TryGetValue(key, out Type? _) ? Type.GetType(typeString) : null;
         }
     }
 }

@@ -20,6 +20,7 @@ namespace LogicBuilder.Structures.Tests.Helpers
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             options.Converters.Add(new DescriptorConverter());
             options.Converters.Add(new ObjectConverter());
+            options.Converters.Add(new ScreenSettingsConverter());
             return options;
         }
     }

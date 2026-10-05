@@ -7,6 +7,14 @@ namespace LogicBuilder.Expressions.Utils.Json
     internal interface ITypeNameHelper
     {
         /// <summary>
+        /// End index for the type name section of the assembly qualified type name.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="startIndex"></param>
+        /// <returns></returns>
+        int GetEndTypeNameIndex(string value, int startIndex);
+
+        /// <summary>
         /// Key is "Namespace.TypeName, AssemblySimpleName" so that version, culture and public key token changes do not break persisted JSON.
         /// </summary>
         /// <param name="type"></param>
