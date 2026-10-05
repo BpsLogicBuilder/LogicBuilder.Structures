@@ -73,7 +73,6 @@ namespace LogicBuilder.Expressions.Utils.Json
         /// <returns></returns>
         public int GetEndTypeNameIndex(string value, int startIndex)
         {
-            int depth = 0;
             for (int i = startIndex; i < value.Length; i++)
             {
                 switch (value[i])
@@ -82,7 +81,7 @@ namespace LogicBuilder.Expressions.Utils.Json
                         return i;
                     case ']':
                         throw new InvalidOperationException("Unexpected character ']'");
-                    case ',' when depth == 0:
+                    case ',':
                         return i;
                 }
             }
